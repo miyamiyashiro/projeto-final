@@ -1,6 +1,6 @@
 # Coffee Delivery — especificação técnica
 
-Status: proposta anterior à implementação. Atualmente existe apenas o template React + Vite em JavaScript; a migração para TypeScript ainda não foi feita.
+Status: base React + Vite convertida para TypeScript em 18/11/2026. As funcionalidades descritas abaixo ainda são planejadas.
 
 ## Tecnologias planejadas
 - React + Vite + TypeScript: interface em componentes TSX, compilação e tipos explícitos.
@@ -74,4 +74,4 @@ Layout móvel como base; pontos de adaptação iniciais 768 e 1024 px, ajustados
 - Interface: desktop/mobile, dois temas, teclado, foco, ausência de overflow e console sem erros.
 
 ## Execução e publicação
-Após instalar dependências com `npm.cmd ci`, usar `npm.cmd run dev`. Scripts atuais: dev, build, lint e preview. Na migração, build deverá verificar TypeScript e gerar produção; adicionar script test. Rodar lint, test e build antes da entrega. Publicar em Vercel ou Netlify e configurar fallback da SPA para acesso direto às rotas. Registrar URLs e resultados reais no README, sem alegar testes não executados.
+Após instalar dependências com `npm.cmd ci`, usar `npm.cmd run dev`. Scripts atuais: dev, typecheck, build, lint e preview. Build verifica TypeScript antes de gerar produção. Adicionar script test junto aos testes das funcionalidades. Rodar lint, test e build antes da entrega. Publicar em Vercel ou Netlify e configurar fallback da SPA para acesso direto às rotas. Registrar URLs e resultados reais no README, sem alegar testes não executados.

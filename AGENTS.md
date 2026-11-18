@@ -3,7 +3,7 @@
 Projeto acadêmico React + Vite + TypeScript de cafeteria com pedido fictício. A aluna está aprendendo: explicar mudanças em português simples e implementar uma tarefa pequena por vez.
 
 ## Antes de escrever código
-Ler docs/PRD_SPEC.md, docs/TECH_SPEC.md e docs/TASKS_SPEC.md. Conferir estado atual do repositório e preservar alterações da usuária. Consultar o Figma e o enunciado vinculados no PRD. O template inicial usa JavaScript; migração para TypeScript é tarefa pendente.
+Ler docs/PRD_SPEC.md, docs/TECH_SPEC.md e docs/TASKS_SPEC.md. Conferir estado atual do repositório e preservar alterações da usuária. Consultar o Figma e o enunciado vinculados no PRD. O template inicial foi convertido para TypeScript na T02; manter componentes em TSX.
 
 ## Regras
 - Respeitar requisitos e escopo documentados. Não gerar toda a aplicação de uma vez.

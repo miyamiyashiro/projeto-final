@@ -4,8 +4,8 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 
 | ID | Objetivo | Requisitos | Arquivos/áreas previstos | Critério de pronto | Status |
 | --- | --- | --- | --- | --- | --- |
-| T01 | Planejar produto e técnica | RF-01–16, RN-01–10 | docs/*SPEC.md, AGENTS.md | Documentos criados, decisões lidas pela aluna e versionadas antes do código | Rascunho pronto; leitura e commit pendentes |
-| T02 | Migrar template para TypeScript | RF-07, arquitetura | package.json, lock, tsconfig, vite/eslint config, src/*.tsx | Dev abre, checagem TS, lint e build passam | Pendente |
+| T01 | Planejar produto e técnica | RF-01–16, RN-01–10 | docs/*SPEC.md, AGENTS.md | Documentos criados, decisões lidas pela aluna e versionadas antes do código | Documentos versionados em 0d196a6 |
+| T02 | Migrar template para TypeScript | RF-07, arquitetura | package.json, lock, tsconfig, vite/eslint config, src/*.tsx | Dev abre, checagem TS, lint e build passam | Implementada e verificada; commit pendente |
 | T03 | Criar identidade com IA | RF-16 | assets, favicon, docs/BRANDING.md | Prompt/resultado reais registrados, logo clara/escura legível | Pendente |
 | T04 | Criar rotas, layout e temas | RF-07,14,15 | pages, styles, contexts, Header | Três rotas, toggle persistido e layout básico móvel | Pendente |
 | T05 | Criar catálogo e cards | RF-01,02,15 | data, types, CoffeeCard, Home | Produtos completos e quantidade positiva | Pendente |
@@ -28,5 +28,5 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 
 ## Registro de validação
 - T01: enunciado lido e estrutura do Figma acessada; base local conferida como template React JavaScript. Documentos descrevem implementação futura, sem declarar funcionalidades já entregues.
-- Testes do aplicativo: ainda não executados nesta etapa documental.
-- Primeiro commit de planejamento sugerido: `docs: planeja requisitos e etapas do Coffee Delivery`.
+- T02 (18/11): TypeScript verificado pelo build, ESLint sem erros e build de produção aprovado. Verificação no Chromium com Playwright: tela inicial abre, contador muda de 0 para 1 e não há erros JavaScript. Uso da biblioteca Playwright, não do MCP. Funcionalidades da cafeteria ainda pendentes.
+- Planejamento registrado no commit 0d196a6. Próximo commit sugerido: `chore: migra base para TypeScript`.
