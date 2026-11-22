@@ -3,7 +3,7 @@
 Projeto final acadêmico: cafeteria virtual com catálogo, carrinho e pedido fictício.
 
 ## Estado atual
-Planejamento registrado e base React + Vite convertida para TypeScript. Cabeçalho com marca aprovada, fontes locais, temas persistidos e rotas Home/Checkout/Success implementados. A Home ainda é uma base; catálogo, carrinho e formulário de checkout permanecem pendentes.
+Planejamento registrado e base React + Vite convertida para TypeScript. Cabeçalho com marca aprovada, fontes locais, temas persistidos e rotas Home/Checkout/Success implementados. Catálogo com 14 cafés e quantidades independentes implementado. Botões de adicionar ainda desabilitados: carrinho e formulário de checkout permanecem pendentes; intro visual da Home ainda será completada.
 
 ## Executar no Windows
 Recomendado Node.js 24 LTS e npm.

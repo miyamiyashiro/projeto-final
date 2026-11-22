@@ -35,3 +35,10 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Decisões: substituir cidade fictícia por texto genérico; manter área de conteúdo inicial enquanto catálogo não está implementado. Checkout e Success mostram estados vazios, sem simular pedidos.
 - Evidências: componentes e páginas em src, ícones locais em public/icons e screenshots em docs/evidencias.
 - Validação real: build com TypeScript aprovado; ESLint aprovado; biblioteca Playwright (não MCP) testou rotas, imagens carregadas, preferência do sistema, escolha persistida, storage bloqueado e larguras 320/390/768/1440. Sem pageerrors. Screenshots desktop claro/mobile escuro inspecionados.
+
+## 05 — Catálogo e quantidades (22/11/2026)
+- Pedido: continuar a etapa de catálogo.
+- Ferramenta: Figma MCP, get_design_context do frame 217:719, com referência visual.
+- Resultado: catálogo local tipado com 14 produtos, imagens locais, tags, descrições e preço fictício de 990 centavos conforme Figma. CoffeeCard e QuantityInput reutilizáveis; quantidades independentes com mínimo 1. Rotação das imagens de Café com Leite e Havaiano preservada conforme referência.
+- Limite desta etapa: botão de adicionar desabilitado até implementação do contexto/reducer; não há adição ou persistência de carrinho ainda. Intro da Home continua provisória, sem a ilustração e benefícios do Figma.
+- Validação: build/TypeScript e ESLint aprovados. Biblioteca Playwright verificou 14 cards, incremento/decremento, mínimo 1, independência entre cards, imagens, temas e larguras 320/390/768/1440 sem overflow ou pageerrors. Screenshots catalog-desktop.png e catalog-mobile-dark.png revisados visualmente.
