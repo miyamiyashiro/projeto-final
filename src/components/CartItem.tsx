@@ -22,8 +22,9 @@ export function CartItem({ item, coffee }: { item: CartItemData; coffee: Coffee 
   <Photo src={coffee.image} alt="" $rotation={coffee.imageRotation}/>
   <div><h3>{coffee.name}</h3><div className="actions">
     <QuantityInput label={coffee.name} value={item.quantity} onChange={value=>dispatch({type:value>item.quantity?'INCREMENT_ITEM':'DECREMENT_ITEM',coffeeId:coffee.id})}/>
-    <Remove onClick={()=>dispatch({type:'REMOVE_ITEM',coffeeId:coffee.id})} aria-label={`Remover ${coffee.name}`}><img src="/icons/trash.svg" alt=""/>Remover</Remove>
+    <Remove type="button" onClick={()=>dispatch({type:'REMOVE_ITEM',coffeeId:coffee.id})} aria-label={`Remover ${coffee.name}`}><img src="/icons/trash.svg" alt=""/>Remover</Remove>
   </div></div>
   <strong>{formatCurrency(coffee.priceInCents * item.quantity)}</strong>
  </Row>
 }
+

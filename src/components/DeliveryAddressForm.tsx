@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { useRef } from 'react'
+
+import { useFormContext } from 'react-hook-form'
+
 import styled from 'styled-components'
-import { addressSchema } from '../schemas/address'
-import type { DeliveryAddress } from '../schemas/address'
+
+import type { CheckoutValues } from '../schemas/checkout'
 import { useCepLookup } from '../hooks/useCepLookup'
-const Panel=styled.form`
+const Panel=styled.section`
  padding:clamp(20px,4vw,40px);background:${({theme})=>theme.mode==='light'?'#F3F2F2':theme.surface};border-radius:6px;
  .intro{display:flex;gap:8px;align-items:flex-start;margin-bottom:28px}.intro h2{font-family:Roboto,sans-serif;font-size:16px;font-weight:400;margin:0}.intro p{font-size:14px;color:${({theme})=>theme.muted};margin:2px 0 0}
  .fields{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px 12px}
@@ -27,28 +28,32 @@ const fields = [
  {name:'city',label:'Cidade',className:'small',autoComplete:'address-level2'},
  {name:'uf',label:'UF',className:'small',autoComplete:'address-level1'},
 ] as const
-export function DeliveryAddressForm() {
- const form=useForm<DeliveryAddress>({resolver:zodResolver(addressSchema),mode:'onBlur',defaultValues:{cep:'',street:'',number:'',complement:'',neighborhood:'',city:'',uf:''}})
- const {register,handleSubmit,getValues,setValue,formState:{errors}}=form
+export function DeliveryAddressForm({onLoadingChange}:{onLoadingChange:(loading:boolean)=>void}) {
+ const form=useFormContext<CheckoutValues>()
+ const {register,getValues,setValue,formState:{errors}}=form
  const cep=useCepLookup()
- const [verified,setVerified]=useState(false)
+ const sequence=useRef(0)
+
  function search(){
-  setVerified(false)
+  const request=++sequence.current
+  onLoadingChange(true)
   void cep.lookup(getValues('cep'),address=>{
    for(const name of ['street','neighborhood','city','uf'] as const)setValue(name,address[name],{shouldValidate:true})
-  })
+  }).finally(()=>{if(request===sequence.current)onLoadingChange(false)})
  }
  const cepField=register('cep')
- return <Panel noValidate onChange={()=>setVerified(false)} onSubmit={handleSubmit(()=>setVerified(true))} aria-label="Endereço de entrega">
+ return <Panel aria-label="Endereço de entrega">
   <div className="intro"><img src="/icons/address.svg" alt=""/><div><h2>Endereço de entrega</h2><p>Informe o endereço onde deseja receber seu pedido.</p></div></div>
   <div className="lookup"><div className="field"><label htmlFor="cep">CEP</label><input {...cepField} id="cep" inputMode="numeric" autoComplete="postal-code" placeholder="00000-000" maxLength={9} aria-invalid={!!errors.cep} aria-describedby={errors.cep?'cep-error':'cep-status'} onChange={event=>{
-   cepField.onChange(event);cep.reset();setVerified(false)
+   cepField.onChange(event);cep.reset();sequence.current++;onLoadingChange(false)
    for(const name of ['street','neighborhood','city','uf'] as const)setValue(name,'')
   }} onBlur={event=>{cepField.onBlur(event);if(getValues('cep').trim())search()}}/>
   {errors.cep&&<p className="error" id="cep-error">{errors.cep.message}</p>}</div><button type="button" onClick={search} disabled={cep.status==='loading'}>Buscar CEP</button></div>
   <p id="cep-status" className={cep.status==='error'?'error':'status'} role="status">{cep.message||'Digite o CEP para buscar o endereço. Você pode corrigir os dados.'}</p>
   <div className="fields">{fields.map(field=><div key={field.name} className={`field ${field.className}`}><label htmlFor={field.name}>{field.label}</label><input {...register(field.name)} id={field.name} autoComplete={field.autoComplete} maxLength={field.name==='uf'?2:150} aria-invalid={!!errors[field.name]} aria-describedby={errors[field.name]?`${field.name}-error`:undefined} readOnly={cep.status==='loading'&&(['street','neighborhood','city','uf'] as string[]).includes(field.name)}/>{errors[field.name]&&<p className="error" id={`${field.name}-error`}>{errors[field.name]?.message}</p>}</div>)}</div>
-  <button className="validate" type="submit" disabled={cep.status==='loading'}>Verificar endereço</button>
-  {verified&&<p role="status" className="status">Campos do endereço válidos. Confira se os dados estão corretos.</p>}
+
+
  </Panel>
 }
+
+

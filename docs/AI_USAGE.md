@@ -56,3 +56,11 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Validação: 32 testes Vitest aprovados, build/TypeScript e lint aprovados. Biblioteca Playwright (não MCP) verificou campos obrigatórios, preenchimento automático, complemento opcional, CEP não encontrado, falha de rede com preenchimento manual, resposta parcial, temas e larguras 320/390/768/1440 sem overflow ou erros JavaScript.
 - As respostas de CEP nos testes foram simuladas; não se trata de teste da disponibilidade real do ViaCEP. Capturas address-desktop.png e address-mobile-dark.png revisadas visualmente.
 - Limite da etapa: Verificar endereço valida campos, mas ainda não confirma pedido. Pagamento e confirmação ficam na T09.
+
+## 08 — Pagamento e confirmação fictícia (22/11/2026)
+- Pedido: continuar com pagamento e conclusão após formulário/CEP.
+- Implementação: formulário compartilhado por FormProvider; enum Zod exige crédito, débito ou dinheiro; envio valida endereço e carrinho, cria snapshot independente, salva na sessão, limpa carrinho e navega para Success. Não coleta dados de cartão nem realiza cobrança.
+- Resumo inclui endereço, complemento, pagamento, produtos e total; refresh recupera snapshot validado. Storage indisponível mantém estado em memória e exibe aviso; JSON inválido é ignorado.
+- Figma MCP consultado nos frames 217:511 e 222:824. Assets locais de pagamento, detalhes e scooter; identidade aprovada preservada. Textos de simulação, labels, foco, cores com melhor contraste e resumo dos itens são adaptações funcionais.
+- Testes reais: 41 casos Vitest aprovados; TypeScript/build e ESLint aprovados. Biblioteca Playwright (não MCP), com CEP simulado: formulário incompleto e pagamento ausente bloqueados; três pagamentos; incremento sem submissão; totais; limpeza; snapshot após refresh; carrinho vazio; acesso direto sem pedido e JSON corrompido; temas e 320/390/768/1440; imagens carregadas; sem pageerrors.
+- Capturas checkout-payment-desktop.png, success-desktop.png e success-mobile-dark.png inspecionadas. Próxima tarefa: revisão visual/mobile e conclusão da introdução da Home; publicação ainda pendente.
