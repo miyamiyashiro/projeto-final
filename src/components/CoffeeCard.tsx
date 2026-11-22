@@ -1,3 +1,4 @@
+import { useCart } from '../hooks/useCart'
 import { useState } from 'react'
 import styled from 'styled-components'
 import type { Coffee } from '../types/coffee'
@@ -25,13 +26,15 @@ const Add = styled.button`
 `
 export function CoffeeCard({ coffee }: { coffee: Coffee }) {
  const [quantity, setQuantity] = useState(1)
+ const { dispatch } = useCart()
+ const [added, setAdded] = useState(0)
  return <Card aria-labelledby={`coffee-${coffee.id}`}>
    <Photo src={coffee.image} alt={coffee.name} $rotation={coffee.imageRotation} width={120} height={120} loading="lazy" />
    <Tags>{coffee.tags.map(tag => <span key={tag}>{tag}</span>)}</Tags>
    <h3 id={`coffee-${coffee.id}`}>{coffee.name}</h3><p>{coffee.description}</p>
    <Buy><strong>{formatCurrency(coffee.priceInCents)}</strong><div className="actions">
      <QuantityInput value={quantity} onChange={setQuantity} label={coffee.name} />
-     <Add type="button" disabled aria-label={`Adicionar ${coffee.name} ao carrinho — indisponível`} title="Adição ao carrinho ainda indisponível"><img src="/coffees/imgShoppingCartSimple.svg" alt="" /></Add>
-   </div></Buy>
+     <Add type="button" onClick={() => { dispatch({ type: 'ADD_ITEM', coffeeId: coffee.id, quantity }); setAdded(value => value + 1) }} aria-label={`Adicionar ${coffee.name} ao carrinho`}><img src="/coffees/imgShoppingCartSimple.svg" alt="" /></Add>
+   </div></Buy><span role="status" style={{fontSize:12,minHeight:18,marginTop:8}}>{added > 0 ? `Adicionado ao carrinho (${added})` : ''}</span>
  </Card>
 }

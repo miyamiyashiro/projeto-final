@@ -9,8 +9,8 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 | T03 | Criar identidade com IA | RF-16 | assets, favicon, docs/BRANDING.md | Prompt/resultado reais registrados, logo clara/escura legível | Marca aprovada e aplicada ao Header/favicon; condições de uso e otimização do favicon pendentes |
 | T04 | Criar rotas, layout e temas | RF-07,14,15 | pages, styles, contexts, Header | Três rotas, toggle persistido e layout básico móvel | Implementada e verificada; commit pendente |
 | T05 | Criar catálogo e cards | RF-01,02,15 | data, types, CoffeeCard, Home | Produtos completos e quantidade positiva | Catálogo e quantidades verificados; adição fica na T06; intro completa pendente |
-| T06 | Criar reducer e contexto | RF-03–05,10; RN-01–04 | reducers, contexts, hooks, utils, tests | Ações, contador e cálculos com testes aprovados | Pendente |
-| T07 | Persistir e exibir carrinho | RF-05,06,11; RN-06,09 | CartItem, CartSummary, storage | Refresh recupera; vazio e JSON inválido tratados | Pendente |
+| T06 | Criar reducer e contexto | RF-03–05,10; RN-01–04 | reducers, contexts, hooks, utils, tests | Ações, contador e cálculos com testes aprovados | Implementada; 15 testes Vitest aprovados |
+| T07 | Persistir e exibir carrinho | RF-05,06,11; RN-06,09 | CartItem, CartSummary, storage | Refresh recupera; vazio e JSON inválido tratados | Implementada e verificada no navegador |
 | T08 | Formulário e CEP | RF-08,11; RN-07 | schemas, services, hooks, DeliveryAddressForm | Sucesso e erros de CEP tratados, campos validados | Pendente |
 | T09 | Pagamento e finalizar | RF-09–13; RN-05,06,10 | Checkout, Success, tipos Order | Fluxo válido gera resumo independente e limpa carrinho | Pendente |
 | T10 | Revisar mobile, temas e acesso | RF-14–16 | styles, components, pages | Fluxo utilizável em 390/768/1440 e verificação 320; teclado e foco | Pendente |

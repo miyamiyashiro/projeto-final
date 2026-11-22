@@ -1,3 +1,4 @@
+import { useCart } from '../hooks/useCart'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ThemeToggle } from './ThemeToggle'
@@ -18,15 +19,16 @@ const Location = styled.span`
 `
 const CartLink = styled(Link)`
   display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px;
-  border-radius: 6px; background: #F1E9C9;
+  border-radius: 6px; background: #F1E9C9; position:relative; .badge { position:absolute; top:-8px; right:-8px; min-width:22px; padding:1px 5px; border-radius:20px; background:#80520B; color:white; text-align:center; font-size:12px; font-weight:700; }
 `
 export function Header() {
+  const { units } = useCart()
   return <Bar>
     <Brand to="/" aria-label="Coffee Delivery — início"><img src="/brand/coffee-delivery-symbol.png" alt="" /><span>Coffee<br />Delivery</span></Brand>
     <Actions aria-label="Ações principais">
       <Location><img src="/icons/location.svg" alt="" />Entrega no seu endereço</Location>
       <ThemeToggle />
-      <CartLink to="/checkout" aria-label="Abrir carrinho"><img src="/icons/cart.svg" alt="" /></CartLink>
+      <CartLink to="/checkout" aria-label={`Abrir carrinho, ${units} unidades`}><img src="/icons/cart.svg" alt="" />{units > 0 && <span className="badge" aria-hidden="true">{units}</span>}</CartLink>
     </Actions>
   </Bar>
 }

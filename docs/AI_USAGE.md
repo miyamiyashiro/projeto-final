@@ -42,3 +42,9 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Resultado: catálogo local tipado com 14 produtos, imagens locais, tags, descrições e preço fictício de 990 centavos conforme Figma. CoffeeCard e QuantityInput reutilizáveis; quantidades independentes com mínimo 1. Rotação das imagens de Café com Leite e Havaiano preservada conforme referência.
 - Limite desta etapa: botão de adicionar desabilitado até implementação do contexto/reducer; não há adição ou persistência de carrinho ainda. Intro da Home continua provisória, sem a ilustração e benefícios do Figma.
 - Validação: build/TypeScript e ESLint aprovados. Biblioteca Playwright verificou 14 cards, incremento/decremento, mínimo 1, independência entre cards, imagens, temas e larguras 320/390/768/1440 sem overflow ou pageerrors. Screenshots catalog-desktop.png e catalog-mobile-dark.png revisados visualmente.
+
+## 06 — Carrinho funcional (22/11/2026)
+- Pedido: continuar após o catálogo.
+- Implementação: CartProvider com Context API/useReducer; ações adicionar, incrementar, decrementar, remover e limpar; badge soma unidades; carrinho salvo em localStorage e recuperado com validação; preços sempre obtidos do catálogo. Totais em centavos e frete único de 350 centavos.
+- Interface: botões dos cards ativados, resumo e edição do carrinho na rota Checkout, estado vazio e aviso quando armazenamento está bloqueado. Referência visual consultada via Figma MCP, frame 217:564. Formulário/pagamento/confirmar pedido ainda não implementados.
+- Testes: 15 testes Vitest aprovados (reducer, imutabilidade, cálculos e recuperação de dados), build/TypeScript e ESLint aprovados. Biblioteca Playwright (não MCP) verificou soma de repetidos, badge, totais, edição, remoção, refresh, estados vazios, JSON inválido e storage bloqueado, temas e 320/390/768/1440px. Sem pageerrors. Capturas cart-desktop.png e cart-mobile-dark.png revisadas.

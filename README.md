@@ -3,7 +3,7 @@
 Projeto final acadêmico: cafeteria virtual com catálogo, carrinho e pedido fictício.
 
 ## Estado atual
-Planejamento registrado e base React + Vite convertida para TypeScript. Cabeçalho com marca aprovada, fontes locais, temas persistidos e rotas Home/Checkout/Success implementados. Catálogo com 14 cafés e quantidades independentes implementado. Botões de adicionar ainda desabilitados: carrinho e formulário de checkout permanecem pendentes; intro visual da Home ainda será completada.
+Planejamento registrado e base React + Vite convertida para TypeScript. Cabeçalho com marca aprovada, fontes locais, temas persistidos e rotas Home/Checkout/Success implementados. Catálogo com 14 cafés e quantidades independentes implementado. Carrinho funcional: adicionar, somar repetidos, editar, remover, calcular totais e recuperar após refresh. Formulário, CEP, pagamento e confirmação permanecem pendentes; intro visual da Home ainda será completada.
 
 ## Executar no Windows
 Recomendado Node.js 24 LTS e npm.
@@ -18,9 +18,10 @@ Abra o endereço exibido no terminal. Para interromper, use Ctrl+C.
 ```powershell
 npm.cmd run typecheck
 npm.cmd run lint
+npm.cmd run test
 npm.cmd run build
 ```
-`typecheck` verifica os tipos; `lint` verifica regras de código; `build` verifica TypeScript e gera a versão de produção em `dist`. `npm.cmd run preview` permite conferir essa versão após o build. Testes de regras de negócio serão adicionados junto às funcionalidades.
+`typecheck` verifica os tipos; `lint` verifica regras de código; `build` verifica TypeScript e gera a versão de produção em `dist`. `npm.cmd run preview` permite conferir essa versão após o build. Vitest verifica regras do carrinho, cálculos e recuperação de dados (15 casos).
 
 ## Planejamento
 - [Requisitos do produto](docs/PRD_SPEC.md)
