@@ -48,3 +48,11 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Implementação: CartProvider com Context API/useReducer; ações adicionar, incrementar, decrementar, remover e limpar; badge soma unidades; carrinho salvo em localStorage e recuperado com validação; preços sempre obtidos do catálogo. Totais em centavos e frete único de 350 centavos.
 - Interface: botões dos cards ativados, resumo e edição do carrinho na rota Checkout, estado vazio e aviso quando armazenamento está bloqueado. Referência visual consultada via Figma MCP, frame 217:564. Formulário/pagamento/confirmar pedido ainda não implementados.
 - Testes: 15 testes Vitest aprovados (reducer, imutabilidade, cálculos e recuperação de dados), build/TypeScript e ESLint aprovados. Biblioteca Playwright (não MCP) verificou soma de repetidos, badge, totais, edição, remoção, refresh, estados vazios, JSON inválido e storage bloqueado, temas e 320/390/768/1440px. Sem pageerrors. Capturas cart-desktop.png e cart-mobile-dark.png revisadas.
+
+## 07 — Endereço e consulta de CEP (22/11/2026)
+- Pedido: continuar a próxima etapa, mantendo desenvolvimento incremental.
+- Implementação: React Hook Form e Zod validam CEP, campos obrigatórios e UF; complemento opcional. Serviço ViaCEP separado do formulário e hook com cancelamento, limite de dez segundos e proteção contra respostas antigas. Campos podem ser corrigidos manualmente.
+- Referência: Figma MCP, painel 217:649; documentação pública https://viacep.com.br/. Labels e mensagens acrescentados para acessibilidade.
+- Validação: 32 testes Vitest aprovados, build/TypeScript e lint aprovados. Biblioteca Playwright (não MCP) verificou campos obrigatórios, preenchimento automático, complemento opcional, CEP não encontrado, falha de rede com preenchimento manual, resposta parcial, temas e larguras 320/390/768/1440 sem overflow ou erros JavaScript.
+- As respostas de CEP nos testes foram simuladas; não se trata de teste da disponibilidade real do ViaCEP. Capturas address-desktop.png e address-mobile-dark.png revisadas visualmente.
+- Limite da etapa: Verificar endereço valida campos, mas ainda não confirma pedido. Pagamento e confirmação ficam na T09.
