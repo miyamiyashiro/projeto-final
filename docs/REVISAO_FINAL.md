@@ -1,7 +1,7 @@
 # Revisão final — 23/11/2026
 
 ## Resultado
-Funcionalidades previstas nos SPECs implementadas e verificadas localmente. Entrega ainda depende de commit/push das mudanças finais, publicação, teste da URL pública e inclusão do link no README.
+Funcionalidades previstas nos SPECs implementadas e verificadas localmente. Publicada em https://projeto-final-delta-ten.vercel.app . Quatro cenários E2E aprovados na URL pública. Falta versionar a atualização documental com o link e enviar ao professor.
 
 O link do Notion não respondeu à nova tentativa de leitura nesta revisão; a comparação usou PRD_SPEC e TECH_SPEC, transcritos na leitura inicial. Não houve confirmação de alterações posteriores do enunciado.
 
@@ -19,7 +19,7 @@ O link do Notion não respondeu à nova tentativa de leitura nesta revisão; a c
 | Documentação | README, AGENTS, PRD/TECH/TASKS, AI_USAGE com dez interações, BRANDING |
 | Evidências | Capturas final-* de três páginas × dois temas × desktop/mobile |
 | Histórico | Commits progressivos já registrados; último verificado antes desta revisão: 315a2a2 |
-| Publicação | vercel.json preparado; URL pública ainda pendente |
+| Publicação | URL pública verificada; acessos diretos a /checkout e /success funcionam |
 
 ## Verificação local
 - 41 testes Vitest aprovados.
@@ -37,3 +37,4 @@ O link do Notion não respondeu à nova tentativa de leitura nesta revisão; a c
 3. Conferir site em janela anônima, inclusive /checkout e /success.
 4. Inserir URL real no README.
 5. Enviar links e estudar o roteiro de demonstração.
+

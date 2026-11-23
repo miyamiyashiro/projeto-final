@@ -15,7 +15,7 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 | T09 | Pagamento e finalizar | RF-09–13; RN-05,06,10 | Checkout, Success, tipos Order | Fluxo válido gera resumo independente e limpa carrinho | Implementada; 41 testes e fluxo no navegador aprovados |
 | T10 | Revisar mobile, temas e acesso | RF-14–16 | styles, components, pages | Fluxo utilizável em 390/768/1440 e verificação 320; teclado e foco | Três telas revisadas; temas, 320/390/768/1440 e axe-core desktop aprovados |
 | T11 | Testar e reunir evidências | Todos | tests, docs/evidencias, AI_USAGE.md | Testes/build/lint verificados; prints e três interações reais | Concluída localmente; ver REVISAO_FINAL.md |
-| T12 | Publicar e preparar entrega | Aceite final | README, SPECs, configuração deploy | URL pública, rotas diretas, GitHub e demonstração conferidos | Configuração e guia prontos; publicação na conta da aluna pendente |
+| T12 | Publicar e preparar entrega | Aceite final | README, SPECs, configuração deploy | URL pública, rotas diretas, GitHub e demonstração conferidos | Publicada na Vercel; quatro testes E2E aprovados na URL pública em 23/11 |
 
 ## Metas atualizadas
 - 18/11: T01 e início de T02.
@@ -30,6 +30,7 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 - T01: enunciado lido e estrutura do Figma acessada; base local conferida como template React JavaScript. Documentos descrevem implementação futura, sem declarar funcionalidades já entregues.
 - T02 (18/11): TypeScript verificado pelo build, ESLint sem erros e build de produção aprovado. Verificação no Chromium com Playwright: tela inicial abre, contador muda de 0 para 1 e não há erros JavaScript. Uso da biblioteca Playwright, não do MCP. Funcionalidades da cafeteria ainda pendentes.
 - Planejamento registrado no commit 0d196a6. Próximo commit sugerido: `chore: migra base para TypeScript`.
+
 
 
 

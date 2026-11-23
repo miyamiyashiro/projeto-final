@@ -33,7 +33,7 @@ npm.cmd run build
 ## Design
 [Figma de referência](https://www.figma.com/design/EW054NGdudJL4d1Z2uC2Ce/Coffee-Delivery?node-id=0-1).
 
-Branding documentado em docs/BRANDING.md; primeiras capturas em docs/evidencias. Fluxo fictício de compra implementado; revisão local concluída; publicação ainda pendente.
+Branding documentado em docs/BRANDING.md; primeiras capturas em docs/evidencias. Fluxo fictício de compra implementado; revisão local concluída e aplicação publicada na Vercel.
 
 
 
@@ -46,6 +46,7 @@ A suíte em e2e usa produção local, CEP simulado e Chromium. Verifica fluxo no
 
 ## Publicação e entrega
 [Passo a passo para Vercel e roteiro de demonstração](docs/PUBLICACAO.md).
-**Site público: publicação pendente na conta da aluna.** vercel.json configura o fallback das rotas. Após publicar, inserir aqui a URL real e verificar acessos diretos.
+**Site publicado:** [Coffee Delivery](https://projeto-final-delta-ten.vercel.app). vercel.json configura o fallback das rotas.
 [Repositório público](https://github.com/miyamiyashiro/projeto-final) · [Revisão final](docs/REVISAO_FINAL.md).
+
 

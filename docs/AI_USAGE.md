@@ -82,3 +82,10 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - npm audit após instalar as ferramentas de testes: zero vulnerabilidades conhecidas; relatório salvo.
 - Evidências atuais final-* em docs/evidencias. Guia PUBLICACAO.md e REVISAO_FINAL.md.
 - Decisão/pendência humana: aluna ainda não possui conta de hospedagem; orientação para criar conta Vercel usando GitHub. Site não publicado nesta etapa e nenhuma URL inventada.
+
+## 11 — Conferência da publicação (23/11/2026)
+- Aluna publicou na Vercel e enviou https://projeto-final-delta-ten.vercel.app .
+- Quatro testes Playwright aprovados contra a URL pública (46 segundos): fluxo claro/escuro, validação, persistência do resumo, carrinho vazio, acessos diretos, falha de CEP/resposta antiga e storage bloqueado. Testes de CEP no navegador usam simulação.
+- Consulta HTTP real separada ao ViaCEP com 01001000 retornou Praça da Sé, São Paulo/SP. Essa consulta não substitui teste de disponibilidade futura nem de CORS no navegador.
+- README, PUBLICACAO, TECH_SPEC, TASKS e revisão atualizados com URL real. Capturas final-* regeneradas contra a versão publicada.
+- Nenhuma compra real efetuada; aplicação mantém pedido fictício apenas no navegador de teste.

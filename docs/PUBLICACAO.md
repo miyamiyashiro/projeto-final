@@ -1,6 +1,6 @@
 # Publicar o Coffee Delivery na Vercel
 
-O código está preparado; o site ainda precisa ser publicado.
+Publicado em 23/11/2026: https://projeto-final-delta-ten.vercel.app . Os passos abaixo ficam como referência para futuras publicações.
 
 1. Faça commit das mudanças no Source Control do VS Code e use Sync Changes / Push.
 2. Crie uma conta em https://vercel.com/signup usando o GitHub.
@@ -15,7 +15,7 @@ O vercel.json configura as rotas conforme a [documentação oficial](https://ver
 
 ## Entrega
 - Repositório: https://github.com/miyamiyashiro/projeto-final
-- Site: aguardando publicação na conta da aluna.
+- Site: https://projeto-final-delta-ten.vercel.app
 - README, AGENTS e três SPECs em docs.
 - Capturas atuais: arquivos com prefixo final- em docs/evidencias.
 - Uso de IA: docs/AI_USAGE.md; logo e prompt: docs/BRANDING.md.
@@ -29,3 +29,4 @@ O vercel.json configura as rotas conforme a [documentação oficial](https://ver
 5. Confirme: mostre endereço, total e carrinho vazio.
 6. Atualize: resumo permanece na sessão.
 7. Explique que não há cobrança ou entrega real.
+
