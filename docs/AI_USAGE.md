@@ -64,3 +64,11 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Figma MCP consultado nos frames 217:511 e 222:824. Assets locais de pagamento, detalhes e scooter; identidade aprovada preservada. Textos de simulação, labels, foco, cores com melhor contraste e resumo dos itens são adaptações funcionais.
 - Testes reais: 41 casos Vitest aprovados; TypeScript/build e ESLint aprovados. Biblioteca Playwright (não MCP), com CEP simulado: formulário incompleto e pagamento ausente bloqueados; três pagamentos; incremento sem submissão; totais; limpeza; snapshot após refresh; carrinho vazio; acesso direto sem pedido e JSON corrompido; temas e 320/390/768/1440; imagens carregadas; sem pageerrors.
 - Capturas checkout-payment-desktop.png, success-desktop.png e success-mobile-dark.png inspecionadas. Próxima tarefa: revisão visual/mobile e conclusão da introdução da Home; publicação ainda pendente.
+
+## 09 — Abertura completa da Home (23/11/2026)
+- Pedido: próxima etapa após pagamento e confirmação.
+- Referência: Figma MCP get_design_context do frame 2:1550. Componente HomeIntro com título, subtítulo, quatro benefícios, ícones originais, ilustração e fundo baixados para public/home.
+- Decisões: preservar marca aprovada no cabeçalho; adaptar layout para uma coluna em telas menores e diminuir opacidade do fundo no tema escuro. Catálogo e regras de compra preservados.
+- Validação: build/TypeScript e lint aprovados. Biblioteca Playwright (não MCP) verificou catálogo com 14 itens, quantidades, rotas, imagens, tema do sistema, preferência persistida, storage bloqueado e larguras 320/390/768/1440 sem overflow ou erros JavaScript.
+- Evidências: home-complete-desktop.png, home-complete-mobile-dark.png e recortes home-intro-desktop.png/home-intro-mobile-dark.png. Recortes da abertura revisados visualmente; ícones e ilustração carregados nos lugares correspondentes.
+- Pendências: revisão final global, otimização de marca/favicon, conferência de dependências e publicação. Não declarar projeto entregue.
