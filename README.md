@@ -33,7 +33,19 @@ npm.cmd run build
 ## Design
 [Figma de referência](https://www.figma.com/design/EW054NGdudJL4d1Z2uC2Ce/Coffee-Delivery?node-id=0-1).
 
-Branding documentado em docs/BRANDING.md; primeiras capturas em docs/evidencias. Fluxo fictício de compra implementado; revisão final e publicação ainda pendentes.
+Branding documentado em docs/BRANDING.md; primeiras capturas em docs/evidencias. Fluxo fictício de compra implementado; revisão local concluída; publicação ainda pendente.
 
 
+
+
+## Teste completo no navegador
+Instale o navegador uma vez com **npx.cmd playwright install chromium**.
+Depois execute **npm.cmd run build** e **npm.cmd run test:e2e**.
+
+A suíte em e2e usa produção local, CEP simulado e Chromium. Verifica fluxo nos dois temas, validação, acessibilidade automática com axe-core, tamanhos 320/390/768/1440, persistência e falhas. Análise automática não substitui testes manuais de acessibilidade.
+
+## Publicação e entrega
+[Passo a passo para Vercel e roteiro de demonstração](docs/PUBLICACAO.md).
+**Site público: publicação pendente na conta da aluna.** vercel.json configura o fallback das rotas. Após publicar, inserir aqui a URL real e verificar acessos diretos.
+[Repositório público](https://github.com/miyamiyashiro/projeto-final) · [Revisão final](docs/REVISAO_FINAL.md).
 

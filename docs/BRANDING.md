@@ -37,3 +37,9 @@ Proposta gerada para este projeto, sem pedir cópia de marca existente. Geraçã
 
 ## Aplicação aprovada — 20/11/2026
 A aluna aprovou a proposta na conversa ("siiim! gostei!!"). Símbolo aplicado ao Header e como favicon PNG; Baloo 2 e Roboto instaladas localmente via @fontsource. No tema escuro, a base creme preserva o símbolo. Screenshots em evidencias/base-desktop.png e evidencias/base-mobile-dark.png. Favicon usa o PNG original nesta etapa; otimização para tamanho menor ainda pendente. Verificação das condições de uso continua pendente.
+
+## Curadoria final — 23/11/2026
+- Identidade aprovada mantida. Baloo 2 e Roboto instaladas, com subconjunto latino local.
+- Favicon usa o PNG original transparente. Exportação menor é melhoria de desempenho, não funcionalidade ausente; original preservado.
+- Condições consultadas em https://openai.com/policies/terms-of-use/ (Content): entre a OpenAI e o usuário, o usuário detém o output na medida permitida pela lei; resultados podem não ser exclusivos. Isso não equivale a pesquisa ou registro de marca. Uso de IA identificado nesta documentação.
+- Aplicações clara e escura aparecem nas capturas finais.

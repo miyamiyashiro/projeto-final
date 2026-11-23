@@ -1,6 +1,6 @@
 # Coffee Delivery — especificação técnica
 
-Status: base React + Vite convertida para TypeScript em 18/11/2026. Catálogo, carrinho, endereço/CEP, pagamento e confirmação implementados até T09. Revisão final e publicação pendentes.
+Status: base React + Vite convertida para TypeScript em 18/11/2026. Catálogo, carrinho, endereço/CEP, pagamento e confirmação implementados até T09. Revisão local concluída; publicação pendente.
 
 ## Tecnologias planejadas
 - React + Vite + TypeScript: interface em componentes TSX, compilação e tipos explícitos.
@@ -8,9 +8,9 @@ Status: base React + Vite convertida para TypeScript em 18/11/2026. Catálogo, c
 - Context API + useReducer: compartilhar carrinho e centralizar alterações (RF-03 a RF-06).
 - React Hook Form + Zod: campos e validação de endereço/pagamento (RF-08, RF-09, RF-11).
 - styled-components: estilos e tokens de temas, conforme stack sugerida pelo professor (RF-14, RF-15).
-- Vitest + Testing Library: regras e comportamento; Playwright pode complementar fluxo no navegador.
+- Vitest para regras; Playwright e axe-core para fluxo no Chromium e acessibilidade automática.
 - ViaCEP: preenchimento de endereço (RF-08).
-Versões e instalação serão verificadas na tarefa de configuração; esta lista não significa que as dependências já foram instaladas.
+Versões efetivamente instaladas estão em package.json e package-lock.json.
 
 ## Organização e responsabilidades
 `src/data`: catálogo. `types`: modelos. `components`: elementos reutilizáveis. `pages`: Home, Checkout e Success. `contexts`: carrinho e tema. `reducers`: alterações do carrinho. `hooks`: acesso ao contexto, tema e consulta de CEP. `schemas`: validação Zod. `services`: integração CEP. `utils`: cálculos/formatação. `styles`: tokens e estilos globais. `tests`: verificações automatizadas.
@@ -75,4 +75,5 @@ Layout móvel como base; pontos de adaptação iniciais 768 e 1024 px, ajustados
 
 ## Execução e publicação
 Após instalar dependências com `npm.cmd ci`, usar `npm.cmd run dev`. Scripts atuais: dev, typecheck, build, lint e preview. Build verifica TypeScript antes de gerar produção. Adicionar script test junto aos testes das funcionalidades. Rodar lint, test e build antes da entrega. Publicar em Vercel ou Netlify e configurar fallback da SPA para acesso direto às rotas. Registrar URLs e resultados reais no README, sem alegar testes não executados.
+
 

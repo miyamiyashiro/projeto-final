@@ -6,16 +6,16 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 | --- | --- | --- | --- | --- | --- |
 | T01 | Planejar produto e técnica | RF-01–16, RN-01–10 | docs/*SPEC.md, AGENTS.md | Documentos criados, decisões lidas pela aluna e versionadas antes do código | Documentos versionados em 0d196a6 |
 | T02 | Migrar template para TypeScript | RF-07, arquitetura | package.json, lock, tsconfig, vite/eslint config, src/*.tsx | Dev abre, checagem TS, lint e build passam | Concluída no commit c414197 |
-| T03 | Criar identidade com IA | RF-16 | assets, favicon, docs/BRANDING.md | Prompt/resultado reais registrados, logo clara/escura legível | Marca aprovada e aplicada ao Header/favicon; condições de uso e otimização do favicon pendentes |
-| T04 | Criar rotas, layout e temas | RF-07,14,15 | pages, styles, contexts, Header | Três rotas, toggle persistido e layout básico móvel | Implementada e verificada; commit pendente |
+| T03 | Criar identidade com IA | RF-16 | assets, favicon, docs/BRANDING.md | Prompt/resultado reais registrados, logo clara/escura legível | Marca aprovada, aplicada e documentada; condições consultadas; redução do PNG é melhoria opcional |
+| T04 | Criar rotas, layout e temas | RF-07,14,15 | pages, styles, contexts, Header | Três rotas, toggle persistido e layout básico móvel | Implementada e versionada no histórico |
 | T05 | Criar catálogo e cards | RF-01,02,15 | data, types, CoffeeCard, Home | Produtos completos e quantidade positiva | Catálogo, quantidades, adição e introdução visual implementados e verificados |
 | T06 | Criar reducer e contexto | RF-03–05,10; RN-01–04 | reducers, contexts, hooks, utils, tests | Ações, contador e cálculos com testes aprovados | Implementada; 15 testes Vitest aprovados |
 | T07 | Persistir e exibir carrinho | RF-05,06,11; RN-06,09 | CartItem, CartSummary, storage | Refresh recupera; vazio e JSON inválido tratados | Implementada e verificada no navegador |
-| T08 | Formulário e CEP | RF-08,11; RN-07 | schemas, services, hooks, DeliveryAddressForm | Sucesso e erros de CEP tratados, campos validados | Implementada e verificada; pagamento/integração final na T09 |
+| T08 | Formulário e CEP | RF-08,11; RN-07 | schemas, services, hooks, DeliveryAddressForm | Sucesso e erros de CEP tratados, campos validados | Implementada, verificada e integrada à T09 |
 | T09 | Pagamento e finalizar | RF-09–13; RN-05,06,10 | Checkout, Success, tipos Order | Fluxo válido gera resumo independente e limpa carrinho | Implementada; 41 testes e fluxo no navegador aprovados |
-| T10 | Revisar mobile, temas e acesso | RF-14–16 | styles, components, pages | Fluxo utilizável em 390/768/1440 e verificação 320; teclado e foco | Home revisada em 320/390/768/1440 e ambos os temas; auditoria final das telas pendente |
-| T11 | Testar e reunir evidências | Todos | tests, docs/evidencias, AI_USAGE.md | Testes/build/lint verificados; prints e três interações reais | Pendente |
-| T12 | Publicar e preparar entrega | Aceite final | README, SPECs, configuração deploy | URL pública, rotas diretas, GitHub e demonstração conferidos | Pendente |
+| T10 | Revisar mobile, temas e acesso | RF-14–16 | styles, components, pages | Fluxo utilizável em 390/768/1440 e verificação 320; teclado e foco | Três telas revisadas; temas, 320/390/768/1440 e axe-core desktop aprovados |
+| T11 | Testar e reunir evidências | Todos | tests, docs/evidencias, AI_USAGE.md | Testes/build/lint verificados; prints e três interações reais | Concluída localmente; ver REVISAO_FINAL.md |
+| T12 | Publicar e preparar entrega | Aceite final | README, SPECs, configuração deploy | URL pública, rotas diretas, GitHub e demonstração conferidos | Configuração e guia prontos; publicação na conta da aluna pendente |
 
 ## Metas atualizadas
 - 18/11: T01 e início de T02.
@@ -30,6 +30,7 @@ Status inicial em 18/11/2026. Prazo informado: 24/11. Datas são metas, não exe
 - T01: enunciado lido e estrutura do Figma acessada; base local conferida como template React JavaScript. Documentos descrevem implementação futura, sem declarar funcionalidades já entregues.
 - T02 (18/11): TypeScript verificado pelo build, ESLint sem erros e build de produção aprovado. Verificação no Chromium com Playwright: tela inicial abre, contador muda de 0 para 1 e não há erros JavaScript. Uso da biblioteca Playwright, não do MCP. Funcionalidades da cafeteria ainda pendentes.
 - Planejamento registrado no commit 0d196a6. Próximo commit sugerido: `chore: migra base para TypeScript`.
+
 
 
 

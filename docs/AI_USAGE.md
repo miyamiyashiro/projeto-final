@@ -72,3 +72,13 @@ Acrescentar interações reais de implementação/revisão e testes conforme aco
 - Validação: build/TypeScript e lint aprovados. Biblioteca Playwright (não MCP) verificou catálogo com 14 itens, quantidades, rotas, imagens, tema do sistema, preferência persistida, storage bloqueado e larguras 320/390/768/1440 sem overflow ou erros JavaScript.
 - Evidências: home-complete-desktop.png, home-complete-mobile-dark.png e recortes home-intro-desktop.png/home-intro-mobile-dark.png. Recortes da abertura revisados visualmente; ícones e ilustração carregados nos lugares correspondentes.
 - Pendências: revisão final global, otimização de marca/favicon, conferência de dependências e publicação. Não declarar projeto entregue.
+
+## 10 — Revisão e preparação para publicação (23/11/2026)
+- Pedido: finalizar revisão e preparar entrega.
+- Repositório confirmado público via GitHub connector. Notion indisponível na nova consulta; critérios comparados com SPECs extraídos anteriormente.
+- Implementação: configuração Vercel para rotas SPA, fontes locais limitadas ao latim, suíte Playwright reproduzível no repositório, documentação de publicação e matriz de requisitos.
+- Testes: 41 Vitest, build/TypeScript e lint aprovados. Quatro cenários de navegador sobre build de produção, incluindo falha/revisão manual do CEP, resposta atrasada e storage indisponível. axe-core sem violações nas três telas desktop e ambos os temas; larguras 320/390/768/1440 sem overflow. CEP simulado; não foi Playwright MCP.
+- O runner inicia/encerra o preview programaticamente para evitar problemas de encerramento de subprocessos no Windows.
+- npm audit após instalar as ferramentas de testes: zero vulnerabilidades conhecidas; relatório salvo.
+- Evidências atuais final-* em docs/evidencias. Guia PUBLICACAO.md e REVISAO_FINAL.md.
+- Decisão/pendência humana: aluna ainda não possui conta de hospedagem; orientação para criar conta Vercel usando GitHub. Site não publicado nesta etapa e nenhuma URL inventada.
